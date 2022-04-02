@@ -8,16 +8,16 @@
     <script src="build/js/main.js"></script>
     <title>Document</title>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100" onunload="close_data()" onbeforeunload="close_data()" >
     <header></header>
     <main class="flex justify-center ">
-        <section class="grid grid-cols-4 grid-rows-4 container pl-5 pr-5 pt-2">
-            <div id="screen" class="col-start-1 row-start-1 col-span-3 row-span-2 m-2 shadow-md rounded-lg overflow-hidden p-6 bg-white  text-center ">
-               
+        <section class="grid grid-rows-5 gap-5 grid-cols-6 sm:grid-rows-5 sm:grid-cols-4 md:grid-cols-4 md:grid-rows-4 lg:grid-cols-4 lg:grid-rows-4 container pl-5 pr-5 pt-2">
+            <div id="screen" class="col-start-1 row-start-1 row-span-1 col-span-6 sm:col-start-1 sm:row-start-1 sm:row-span-1 sm:col-span-4 md:col-start-1 md:row-start-1 md:row-span-2 md:col-span-3 lg:col-start-1 lg:row-start-1 lg:row-span-2 lg:col-span-3  m-2 shadow-md rounded-lg overflow-hidden p-6 bg-white  text-center ">   
             </div>
-                <button id="generate" onclick="plus()" class="col-start-4 row-start-1 col-span-1 m-2.5 shadow-md rounded-lg overflow-hidden p-5 bg-white  text-center">Géneré un mot de passe</button>
-                <button id="savemdp" onclick="save()" class="col-start-4 row-start-2 disabled:opacity-50 disabled:bg-white opacity-100 col-span-1 m-2.5 shadow-md rounded-lg overflow-hidden p-5 bg-green-300  text-center" disabled>Sauvegarder le mot de passe</button>
-            <div id="big_screen" class="col-span-4 row-span-2 m-2 shadow-md rounded-lg overflow-hidden p-6 bg-white ">
+            <button id="generate" onclick="plus()" class="col-start-1 row-start-2 row-span-1 col-span-3 sm:col-start-1 sm:row-start-2 sm:row-span-1 sm:col-span-2 md:col-start-4 md:row-start-1 md:row-span-1 md:col-span-1 lg:col-start-4 lg:row-start-1 lg:col-span-1 m-2.5 shadow-md rounded-lg overflow-hidden p-5 bg-white  text-center disabled:bg-red-300 opacity-100 bg-green-300">Géneré un mot de passe</button>
+            <button id="savemdp" onclick="save()" class="col-start-4 row-start-2 row-span-1 col-span-3 sm:col-start-3 sm:row-start-2 sm:row-span-1 sm:col-span-2 md:col-start-4 md:row-start-2 md:row-span-1 md:col-span-1 lg:col-start-4 lg:row-start-2 lg:col-span-1 disabled:opacity-50  disabled:bg-white opacity-100  m-2.5 shadow-md rounded-lg overflow-hidden p-5 bg-green-300  text-center" disabled>Enregister temporairement le mot de passe</button>
+            <button id="delmdp" onclick="delcookies()" class="col-start-1 row-start-3 row-span-1 col-span-6 sm:col-start-1 sm:row-start-3 sm:row-span-1 sm:col-span-1 md:col-start-1 md:row-start-3  md:row-span-2 md:col-span-1 lg:col-start-1 lg:row-start-3 lg:col-span-1 lg:row-span-2 m-2.5 shadow-md rounded-lg overflow-hidden p-5 bg-white  text-center">Supprimer les mots de passes</button>
+            <div id="big_screen" class="col-start-1 row-start-4 row-span-2 col-span-6 sm:col-start-2 sm:row-start-3 sm:row-span-1 sm:col-span-3 md:col-start-2 md:row-start-3 md:row-span-2 md:col-span-3 lg:col-start-2 lg:row-start-3 lg:col-span-3 lg:row-span-2 m-2 shadow-md rounded-lg overflow-hidden p-6 bg-white ">
             </div>
         </section>
     </main>
